@@ -1,9 +1,17 @@
+import Header from '@/components/Header';
+
 export default function Payments() {
-    return (
-      <div>
-        <h1>Payments 缴费信息</h1>
-        <p>This is the Payments page.</p>
-      </div>
-    );
-  }
-  
+  return (
+    <>
+      <Header />
+      <main style={{ padding: '20px' }}>
+        <h1>Payments</h1>
+        <p>Latest Payment Records:</p>
+        <ul>
+          <li>John Doe - $500 - 2025-03-01</li>
+          <li>Jane Smith - $450 - 2025-03-05</li>
+        </ul>
+      </main>
+    </>
+  );
+}
