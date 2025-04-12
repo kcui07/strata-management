@@ -10,7 +10,7 @@ export default function Home() {
         <meta name="description" content="Welcome to Strata Management Website" />
       </Head>
 
-      {/* 顶部导航栏 */}
+      {/* 修正后的导航栏 */}
       <nav
         style={{
           position: "fixed",
@@ -23,11 +23,22 @@ export default function Home() {
           textAlign: "center",
         }}
       >
-        <Link href="/" style={{ margin: "0 15px" }}>Home 首页</Link>
-        <Link href="/owners" style={{ margin: "0 15px" }}>Owners Info 业主信息</Link>
-        <Link href="/maintenance" style={{ margin: "0 15px" }}>Maintenance 报修管理</Link>
-        <Link href="/payments" style={{ margin: "0 15px" }}>Payments 费用缴纳</Link>
-        <Link href="/contact" style={{ margin: "0 15px" }}>Contact 联系我们</Link>
+        {/* 使用 <a> 标签包裹在 <Link> 内 */}
+        <Link href="/" passHref>
+          <a style={{ margin: "0 15px" }}>Home 首页</a>
+        </Link>
+        <Link href="/owners" passHref>
+          <a style={{ margin: "0 15px" }}>Owners Info 业主信息</a>
+        </Link>
+        <Link href="/maintenance" passHref>
+          <a style={{ margin: "0 15px" }}>Maintenance 报修管理</a>
+        </Link>
+        <Link href="/payments" passHref>
+          <a style={{ margin: "0 15px" }}>Payments 费用缴纳</a>
+        </Link>
+        <Link href="/contact" passHref>
+          <a style={{ margin: "0 15px" }}>Contact 联系我们</a>
+        </Link>
       </nav>
 
       {/* 内容部分 */}
