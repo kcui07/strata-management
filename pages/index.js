@@ -9,6 +9,7 @@ export default function Home() {
         <meta name="description" content="Welcome to Strata Management Website" />
       </Head>
 
+      {/* Navigation Bar */}
       <nav
         style={{
           position: "fixed",
@@ -21,22 +22,19 @@ export default function Home() {
           textAlign: "center",
         }}
       >
-        import Link from 'next/link'
-
-        <Link href="/">Home</Link>
-        <Link href="/owners">Owners</Link>
-        <Link href="/maintenance">Maintenance</Link>
-        <Link href="/payments">Payments</Link>
-        <Link href="/contact">Contact</Link>
-
+        <Link href="/" style={{ margin: "0 15px" }}>Home 首页</Link>
+        <Link href="/owners" style={{ margin: "0 15px" }}>Owners Info 业主信息</Link>
+        <Link href="/maintenance" style={{ margin: "0 15px" }}>Maintenance 报修/维护</Link>
+        <Link href="/payments" style={{ margin: "0 15px" }}>Payments 费用缴纳</Link>
+        <Link href="/contact" style={{ margin: "0 15px" }}>Contact 联系我们</Link>
       </nav>
 
+      {/* Main Content */}
       <div style={{ paddingTop: "80px", textAlign: "center" }}>
-        <h1>Welcome to Strata Management Website</h1>
-        <p>This site provides information for owners and residents.</p>
-        <p>Please use the navigation bar above to visit other pages.</p>
+        <h1>Welcome to Strata Management Website 欢迎来到物业管理网站</h1>
+        <p>This site provides information for owners and residents. 本网站为业主和住户提供信息。</p>
+        <p>Please use the navigation bar above to visit other pages. 请使用上方导航栏浏览其他页面。</p>
       </div>
-    
     </div>
   );
 }
