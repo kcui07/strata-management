@@ -1,24 +1,31 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: pink;
+  padding: 20px 50px;
+  height: 100px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
 .navbar {
-    background-color: #f3b9d1;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-  }
-  
-  .navbar a {
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    text-decoration: none;
-    transition: transform 0.2s ease, color 0.2s ease;
-  }
-  
-  .navbar a:hover {
-    transform: scale(1.1);
-    color: #ffebf0;
-  }
-  
+  display: flex;
+  gap: 40px;
+}
+
+.navbar a {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  transition: transform 0.2s;
+}
+
+.navbar a:hover {
+  transform: scale(1.1);
+  color: #ffe0f0;
+}
