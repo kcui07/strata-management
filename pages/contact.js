@@ -17,64 +17,40 @@ export default function Contact() {
 
         <div style={{
           position: 'absolute',
-          width: '100%',
-          height: '100%',
-          backgroundColor: 'rgba(0, 0, 0, 0.4)',
-          zIndex: 1,
-        }}></div>
-
-        <h2 style={{
-          position: 'absolute',
-          top: '50px',
-          left: '50%',
-          transform: 'translateX(-50%)',
+          top: '30px',
+          left: '30px',
           color: 'white',
-          fontSize: '32px',
-          textAlign: 'center',
-          zIndex: 2,
-          maxWidth: '80%',
+          fontSize: '24px',
+          maxWidth: '300px',
+          lineHeight: '1.6'
         }}>
           Send us a message or request a call back and we’ll get back to you on the same business day.
-        </h2>
+        </div>
 
         <div style={{
           position: 'absolute',
-          bottom: '-100px',
-          left: '50%',
-          transform: 'translateX(-50%)',
-          backgroundColor: '#fff',
+          top: '50%',
+          right: '50px',
+          transform: 'translateY(-50%)',
+          backgroundColor: 'rgba(255,255,255,0.9)',
           padding: '40px',
           borderRadius: '10px',
-          width: '90%',
-          maxWidth: '600px',
-          boxShadow: '0 4px 20px rgba(0, 0, 0, 0.2)',
-          zIndex: 3,
+          boxShadow: '0 4px 20px rgba(0,0,0,0.1)',
+          maxWidth: '400px',
+          width: '100%',
         }}>
-          <h2 style={{ marginBottom: '30px', fontSize: '28px', fontWeight: 'bold' }}>Get in touch</h2>
+          <h2 style={{ marginBottom: '20px' }}>Get in touch</h2>
 
           <form>
-            <input type="text" placeholder="Name" style={inputStyle} />
-            <input type="email" placeholder="Email" style={inputStyle} />
-            <input type="text" placeholder="Phone" style={inputStyle} />
-            <input type="text" placeholder="Plan Number or Building Address (optional)" style={inputStyle} />
-            <textarea placeholder="Your Message" style={{ ...inputStyle, height: '120px' }} />
-
-            <button type="submit" style={{
-              backgroundColor: '#add8e6',
-              border: 'none',
-              padding: '12px',
-              width: '100%',
-              borderRadius: '5px',
-              fontSize: '18px',
-              cursor: 'pointer'
-            }}>
-              Submit
-            </button>
+            <input placeholder="Name" style={inputStyle} /><br /><br />
+            <input placeholder="Email" style={inputStyle} /><br /><br />
+            <input placeholder="Phone" style={inputStyle} /><br /><br />
+            <input placeholder="Plan Number or Building Address (optional)" style={inputStyle} /><br /><br />
+            <textarea placeholder="Your Message" style={{ ...inputStyle, height: '100px' }} /><br /><br />
+            <button type="submit" style={buttonStyle}>Submit</button>
           </form>
         </div>
       </div>
-
-      <div style={{ height: '200px' }}></div>
 
       <Footer />
     </>
@@ -84,8 +60,17 @@ export default function Contact() {
 const inputStyle = {
   width: '100%',
   padding: '10px',
-  marginBottom: '20px',
-  borderRadius: '4px',
+  borderRadius: '5px',
   border: '1px solid #ccc',
-  fontSize: '16px'
+};
+
+const buttonStyle = {
+  width: '100%',
+  padding: '12px',
+  backgroundColor: '#add8e6', 
+  border: 'none',
+  color: '#000',
+  borderRadius: '5px',
+  fontSize: '16px',
+  cursor: 'pointer',
 };
