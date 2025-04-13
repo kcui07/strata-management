@@ -8,6 +8,8 @@ export default function Payment() {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [card, setCard] = useState("");
+  const [expiry, setExpiry] = useState("");
+  const [cvv, setCvv] = useState("");
 
   const prices = {
     Rent: 500,
@@ -24,22 +26,20 @@ export default function Payment() {
     ],
   };
 
+  const isComplete = name && email && phone && card && expiry && cvv;
+
   return (
     <>
       <Header />
 
       <div style={{ display: "flex", minHeight: "100vh", paddingTop: "100px" }}>
-        {/* Left section - Form */}
+        {/* Left: Form */}
         <div style={{ flex: 1, padding: "40px 60px" }}>
           <h2 style={{ marginBottom: "20px" }}>Make a Payment</h2>
 
           <label>
             Select Payment Type:
-            <select
-              style={inputStyle}
-              value={selected}
-              onChange={(e) => setSelected(e.target.value)}
-            >
+            <select style={inputStyle} value={selected} onChange={(e) => setSelected(e.target.value)}>
               <option>Rent</option>
               <option>Utilities</option>
               <option>Both</option>
@@ -48,60 +48,23 @@ export default function Payment() {
 
           <br /><br />
 
-          <label>
-            Full Name:
-            <input
-              style={inputStyle}
-              placeholder="Enter your name"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-            />
-          </label>
-
+          <label>Full Name:<input style={inputStyle} placeholder="Enter your name" value={name} onChange={(e) => setName(e.target.value)} /></label>
+          <br /><br />
+          <label>Email:<input style={inputStyle} placeholder="Enter your email" value={email} onChange={(e) => setEmail(e.target.value)} /></label>
+          <br /><br />
+          <label>Phone:<input style={inputStyle} placeholder="Enter your phone" value={phone} onChange={(e) => setPhone(e.target.value)} /></label>
+          <br /><br />
+          <label>Credit Card Number:<input style={inputStyle} placeholder="xxxx xxxx xxxx xxxx" value={card} onChange={(e) => setCard(e.target.value)} /></label>
+          <br /><br />
+          <label>Expiry Date:<input style={inputStyle} placeholder="MM/YY" value={expiry} onChange={(e) => setExpiry(e.target.value)} /></label>
+          <br /><br />
+          <label>CVV:<input style={inputStyle} placeholder="3 digits" value={cvv} onChange={(e) => setCvv(e.target.value)} /></label>
           <br /><br />
 
-          <label>
-            Email:
-            <input
-              style={inputStyle}
-              placeholder="Enter your email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-          </label>
-
-          <br /><br />
-
-          <label>
-            Phone Number:
-            <input
-              style={inputStyle}
-              placeholder="Enter your phone number"
-              value={phone}
-              onChange={(e) => setPhone(e.target.value)}
-            />
-          </label>
-
-          <br /><br />
-
-          <label>
-            Credit Card Number:
-            <input
-              style={inputStyle}
-              placeholder="xxxx xxxx xxxx xxxx"
-              value={card}
-              onChange={(e) => setCard(e.target.value)}
-            />
-          </label>
-
-          <br /><br />
-
-          <button className="pay-btn" disabled={!name || !email || !phone || !card}>
-            Pay ${prices[selected]}
-          </button>
+          <button className="pay-btn" disabled={!isComplete}>Pay ${prices[selected]}</button>
         </div>
 
-        {/* Right section - Summary */}
+        {/* Right: Summary */}
         <div style={{
           width: "400px",
           backgroundColor: "#f9f9f9",
@@ -111,18 +74,14 @@ export default function Payment() {
           <h3>Summary</h3>
           <ul style={{ listStyle: "none", padding: 0 }}>
             {details[selected].map((item, index) => (
-              <li key={index} style={{
-                display: "flex", justifyContent: "space-between", marginBottom: "10px"
-              }}>
+              <li key={index} style={{ display: "flex", justifyContent: "space-between", marginBottom: "10px" }}>
                 <span>{item.label}</span>
                 <strong>${item.amount.toFixed(2)}</strong>
               </li>
             ))}
           </ul>
           <hr />
-          <div style={{
-            display: "flex", justifyContent: "space-between", marginTop: "10px"
-          }}>
+          <div style={{ display: "flex", justifyContent: "space-between", marginTop: "10px" }}>
             <strong>Total</strong>
             <strong>${prices[selected].toFixed(2)}</strong>
           </div>
