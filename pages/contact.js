@@ -11,12 +11,12 @@ export default function Contact() {
         flexDirection: 'column',
         minHeight: '100vh'
       }}>
-        
+
         <div style={{ flex: '1' }}>
           <div style={{
             position: 'relative',
             width: '100%',
-            height: '600px',
+            minHeight: '600px',
             backgroundImage: 'url(/contact.jpg)',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
@@ -24,9 +24,9 @@ export default function Contact() {
 
             <div style={{
               position: 'absolute',
-              top: '120px',  
+              top: '150px',
               left: '30px',
-              color: 'white',
+              color: '#000', 
               fontSize: '20px',
               lineHeight: '1.8',
               maxWidth: '280px'
