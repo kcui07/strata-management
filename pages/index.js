@@ -17,7 +17,7 @@ export default function Home() {
         />
       </div>
 
-      <main className="main-content" style={{ textAlign: 'center', marginTop: '120px', minHeight: 'calc(100vh - 400px)' }}>
+      <main className="main-content" style={{ textAlign: 'center', marginTop: '120px', minHeight: 'calc(100vh - 400px)', marginBottom: '80px' }}>
         <h1 style={{ fontSize: '40px', fontWeight: 'bold' }}>
           Welcome to Strata Management Website
         </h1>
