@@ -17,30 +17,40 @@ export default function Home() {
         />
       </div>
 
-      <section style={{ backgroundColor: '#FAD1DC', padding: '60px 20px', textAlign: 'center' }}>
-        <h2 style={{ fontSize: '36px', fontWeight: 'bold', marginBottom: '50px' }}>Our Values</h2>
+      <main className="main-content" style={{ textAlign: 'center', marginTop: '120px', minHeight: 'calc(100vh - 400px)' }}>
+        <h1 style={{ fontSize: '40px', fontWeight: 'bold' }}>
+          Welcome to Strata Management Website
+        </h1>
 
-        <div style={{ display: 'flex', justifyContent: 'space-around', flexWrap: 'wrap', maxWidth: '1200px', margin: '0 auto' }}>
-          <div style={{ fontSize: '20px', fontWeight: 'bold', marginBottom: '30px' }}>
-            United we <br /> are stronger
-          </div>
-          <div style={{ fontSize: '20px', fontWeight: 'bold', marginBottom: '30px' }}>
-            Trusted and <br /> transparent
-          </div>
-          <div style={{ fontSize: '20px', fontWeight: 'bold', marginBottom: '30px' }}>
-            Accountable to <br /> ourselves and others
-          </div>
-          <div style={{ fontSize: '20px', fontWeight: 'bold', marginBottom: '30px' }}>
-            Visionary <br /> Think big, aim high
-          </div>
-        </div>
-      </section>
+        <h3 style={{ color: '#f48fb1', marginTop: '30px', marginBottom: '30px' }}>
+          This site provides information for owners and residents.
+        </h3>
 
-      <main style={{ textAlign: 'center', marginTop: '120px', minHeight: 'calc(100vh - 400px)' }}>
-        <h1>Welcome to Strata Management Website</h1>
-        <p>This site provides information for owners and residents.</p>
-        <p>Please use the navigation bar above to browse other pages.</p>
+        <p style={{ maxWidth: '800px', margin: '0 auto', lineHeight: '1.8', fontSize: '18px' }}>
+          Strata Management is committed to delivering exceptional property management services to owners and residents. 
+          With years of industry experience, we focus on creating harmonious living environments and efficient property operations. 
+          Our team ensures transparent communication, reliable maintenance, and dedicated customer service to meet the diverse needs of our communities.
+        </p>
       </main>
+
+      <div style={{ backgroundColor: '#f2f2f2', padding: '60px 20px' }}>
+        <h2 style={{ textAlign: 'center', fontSize: '36px', fontWeight: 'bold', marginBottom: '50px' }}>
+          Our Values
+        </h2>
+
+        <div style={{
+          display: 'flex',
+          justifyContent: 'space-around',
+          flexWrap: 'wrap',
+          maxWidth: '1200px',
+          margin: '0 auto'
+        }}>
+          <div style={{ fontSize: '22px', fontWeight: 'bold', margin: '20px' }}>United we are stronger</div>
+          <div style={{ fontSize: '22px', fontWeight: 'bold', margin: '20px' }}>Trusted and transparent</div>
+          <div style={{ fontSize: '22px', fontWeight: 'bold', margin: '20px' }}>Accountable to ourselves and others</div>
+          <div style={{ fontSize: '22px', fontWeight: 'bold', margin: '20px' }}>Visionary, think big, aim high</div>
+        </div>
+      </div>
 
       <Footer />
     </>
