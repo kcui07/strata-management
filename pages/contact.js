@@ -25,10 +25,10 @@ export default function Contact() {
 
             <div style={{
               position: 'absolute',
-              top: '150px',
+              top: '100px',
               left: '30px',
               color: '#000',
-              fontSize: '20px',
+              fontSize: '15px',
               lineHeight: '1.8',
               maxWidth: '280px'
             }}>
