@@ -1,62 +1,93 @@
 import Header from '../components/Header';
 import Footer from "../components/Footer";
+import Link from 'next/link';
 
 export default function Owners() {
   return (
     <>
       <Header />
 
-      <main style={{ minHeight: 'calc(100vh - 200px)', padding: '40px 20px' }}>
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: '1fr 1fr',
-          gap: '30px',
-          maxWidth: '1200px',
-          margin: '0 auto'
+      <div style={{
+        display: 'flex',
+        flexDirection: 'column',
+        minHeight: '100vh',
+      }}>
+
+        <main style={{
+          flex: '1',
+          paddingTop: '140px', 
+          paddingBottom: '60px',
+          textAlign: 'center'
         }}>
-          {/* Owner Portal */}
-          <div style={{ backgroundColor: '#ffe1e1', padding: '30px', borderRadius: '10px' }}>
-            <h2>Owner Portal Access</h2>
-            <p>Log in to view your property details, pay bills, and access documents.</p>
-            <button style={btnStyle('#f8b6b6')}>Login to Portal</button>
-          </div>
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: '1fr 1fr',
+            gap: '30px',
+            maxWidth: '1000px',
+            margin: '0 auto'
+          }}>
+            {/* Owner Portal */}
+            <div style={{ backgroundColor: '#ffe0e0', padding: '40px 20px', borderRadius: '10px' }}>
+              <h2>Owner Portal Access</h2>
+              <p>Log in to view your property details, pay bills, and access documents.</p>
+              <button className="owner-btn pink">
+                Login to Portal
+              </button>
+            </div>
 
-          {/* Download Documents */}
-          <div style={{ backgroundColor: '#d9f7e1', padding: '30px', borderRadius: '10px' }}>
-            <h2>Download Documents</h2>
-            <p>Download important forms and guidelines for owners.</p>
-            <button style={btnStyle('#b8eac4')}>View Documents</button>
-          </div>
+            {/* Download */}
+            <div style={{ backgroundColor: '#d8f5e5', padding: '40px 20px', borderRadius: '10px' }}>
+              <h2>Download Documents</h2>
+              <p>Download important forms and guidelines for owners.</p>
+              <button className="owner-btn green">
+                View Documents
+              </button>
+            </div>
 
-          {/* Payment Instructions */}
-          <div style={{ backgroundColor: '#d9eaff', padding: '30px', borderRadius: '10px' }}>
-            <h2>Payment Instructions</h2>
-            <p>Find detailed instructions on how to pay strata fees.</p>
-            <button style={btnStyle('#9ac6ff')}>Payment Guide</button>
-          </div>
+            {/* Payment */}
+            <div style={{ backgroundColor: '#dceeff', padding: '40px 20px', borderRadius: '10px' }}>
+              <h2>Payment Instructions</h2>
+              <p>Find detailed instructions on how to pay strata fees.</p>
+              <button className="owner-btn blue">
+                Payment Guide
+              </button>
+            </div>
 
-          {/* FAQs */}
-          <div style={{ backgroundColor: '#ffe9d9', padding: '30px', borderRadius: '10px' }}>
-            <h2>Frequently Asked Questions</h2>
-            <p>Check answers to commonly asked questions.</p>
-            <button style={btnStyle('#ffc7a8')}>View FAQs</button>
+            {/* FAQ */}
+            <div style={{ backgroundColor: '#ffe9d7', padding: '40px 20px', borderRadius: '10px' }}>
+              <h2>Frequently Asked Questions</h2>
+              <p>Check answers to commonly asked questions.</p>
+              <button className="owner-btn orange">
+                View FAQs
+              </button>
+            </div>
           </div>
-        </div>
-      </main>
+        </main>
 
-      <Footer />
+        <Footer />
+      </div>
+
+      <style jsx>{`
+        .owner-btn {
+          border: none;
+          padding: 12px 30px;
+          font-size: 16px;
+          font-weight: bold;
+          border-radius: 6px;
+          cursor: pointer;
+          transition: all 0.3s ease;
+        }
+
+        .pink { background-color: #f9b3b3; }
+        .green { background-color: #aee5c8; }
+        .blue { background-color: #addfff; }
+        .orange { background-color: #ffd3af; }
+
+        .owner-btn:hover {
+          transform: scale(1.1);
+          opacity: 0.8;
+        }
+      `}</style>
     </>
-  )
+  );
 }
-
-const btnStyle = (color) => ({
-  backgroundColor: color,
-  padding: '10px 20px',
-  border: 'none',
-  borderRadius: '5px',
-  marginTop: '20px',
-  fontWeight: 'bold',
-  cursor: 'pointer',
-  transition: 'all 0.3s ease',
-  display: 'inline-block'
-});
