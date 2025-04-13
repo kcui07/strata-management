@@ -5,7 +5,7 @@ export default function Contact() {
   return (
     <>
       <Header />
-      <main style={{ padding: '20px' }}>
+      <main className="main-content" style={{ padding: '20px' }}>
         <h1>Contact Us</h1>
         <form>
           <label>Name:

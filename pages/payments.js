@@ -5,7 +5,7 @@ export default function Payments() {
   return (
     <>
       <Header />
-      <main style={{ padding: '20px' }}>
+      <main className="main-content" style={{ padding: '20px' }}>
         <h1>Payments</h1>
         <p>Latest Payment Records:</p>
         <ul>
@@ -14,7 +14,6 @@ export default function Payments() {
         </ul>
       </main>
       <Footer />
-
     </>
   );
 }

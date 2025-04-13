@@ -5,7 +5,7 @@ export default function Owners() {
   return (
     <>
       <Header />
-      <main style={{ padding: '20px' }}>
+      <main className="main-content" style={{ padding: '20px' }}>
         <h1>Owners Info</h1>
         <table border="1" width="100%">
           <thead>
@@ -22,7 +22,6 @@ export default function Owners() {
         </table>
       </main>
       <Footer />
-
     </>
   );
 }
