@@ -9,7 +9,8 @@ export default function Contact() {
       <div style={{
         display: 'flex',
         flexDirection: 'column',
-        minHeight: '100vh'
+        minHeight: '100vh',
+        marginTop: '80px' 
       }}>
 
         <div style={{ flex: '1' }}>
@@ -26,12 +27,13 @@ export default function Contact() {
               position: 'absolute',
               top: '150px',
               left: '30px',
-              color: '#000', 
+              color: '#000',
               fontSize: '20px',
               lineHeight: '1.8',
               maxWidth: '280px'
             }}>
-              Send us a message or request a call back <br /> and we’ll get back to you on the same business day.
+              Send us a message or request a call back <br /> 
+              and we will get back to you on the same business day.
             </div>
 
             <div style={{
