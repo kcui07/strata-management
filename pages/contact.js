@@ -1,35 +1,54 @@
 import Header from '../components/Header';
 import Footer from "../components/Footer";
-import Image from 'next/image';
 
 export default function Contact() {
   return (
     <>
       <Header />
 
-      <div style={{ padding: '60px 40px 20px 40px', backgroundColor: '#f9f9f9', textAlign: 'center' }}>
-        <h2 style={{ fontSize: '28px', marginBottom: '20px' }}>
+      <div style={{
+        position: 'relative',
+        width: '100%',
+        height: '600px',
+        backgroundImage: 'url(/contact.jpg)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      }}>
+
+        <div style={{
+          position: 'absolute',
+          width: '100%',
+          height: '100%',
+          backgroundColor: 'rgba(0, 0, 0, 0.4)',
+          zIndex: 1,
+        }}></div>
+
+        <h2 style={{
+          position: 'absolute',
+          top: '50px',
+          left: '50%',
+          transform: 'translateX(-50%)',
+          color: 'white',
+          fontSize: '32px',
+          textAlign: 'center',
+          zIndex: 2,
+          maxWidth: '80%',
+        }}>
           Send us a message or request a call back and we’ll get back to you on the same business day.
         </h2>
-        <div style={{ maxWidth: '900px', margin: '0 auto' }}>
-          <Image
-            src="/contact.jpg"
-            alt="Contact us"
-            layout="responsive"
-            width={900}
-            height={500}
-          />
-        </div>
-      </div>
 
-      <div style={{ display: 'flex', justifyContent: 'center', padding: '60px 40px', backgroundColor: '#f9f9f9' }}>
         <div style={{
-          maxWidth: '600px',
-          width: '100%',
+          position: 'absolute',
+          bottom: '-100px',
+          left: '50%',
+          transform: 'translateX(-50%)',
           backgroundColor: '#fff',
           padding: '40px',
-          borderRadius: '8px',
-          boxShadow: '0 2px 8px rgba(0, 0, 0, 0.1)'
+          borderRadius: '10px',
+          width: '90%',
+          maxWidth: '600px',
+          boxShadow: '0 4px 20px rgba(0, 0, 0, 0.2)',
+          zIndex: 3,
         }}>
           <h2 style={{ marginBottom: '30px', fontSize: '28px', fontWeight: 'bold' }}>Get in touch</h2>
 
@@ -54,6 +73,8 @@ export default function Contact() {
           </form>
         </div>
       </div>
+
+      <div style={{ height: '200px' }}></div>
 
       <Footer />
     </>

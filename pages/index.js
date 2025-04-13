@@ -47,7 +47,7 @@ export default function Home() {
           <div style={{ fontSize: '22px', fontWeight: 'bold' }}>United we are stronger</div>
           <div style={{ fontSize: '22px', fontWeight: 'bold' }}>Trusted and transparent</div>
           <div style={{ fontSize: '22px', fontWeight: 'bold' }}>Accountable to ourselves and others</div>
-          <div style={{ fontSize: '22px', fontWeight: 'bold' }}>Visionary, think big, aim high</div>
+          <div style={{ fontSize: '22px', fontWeight: 'bold' }}>Visionary, aim high</div>
         </div>
       </div>
 
