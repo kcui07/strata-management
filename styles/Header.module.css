@@ -2,9 +2,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 50px;
   background-color: #f8c8dc;
-  height: 80px; 
+  padding: 10px 40px;
 }
 
 .logo img {
@@ -13,17 +12,17 @@
 
 .navbar {
   display: flex;
-  gap: 40px;
+  gap: 40px;  
+  font-size: 20px; 
+  font-weight: bold;
 }
 
 .navbar a {
   color: white;
-  font-weight: bold;
-  font-size: 20px; 
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: transform 0.2s ease;
 }
 
 .navbar a:hover {
-  color: #ffe0f0;
+  transform: scale(1.1);
 }

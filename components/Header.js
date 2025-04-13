@@ -6,7 +6,7 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.logo}>
-        <Image src="/logo.png" alt="Logo" width={150} height={60} />
+        <Image src="/newlogo.png" alt="Logo" width={250} height={80} />
       </div>
 
       <nav className={styles.navbar}>
