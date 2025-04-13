@@ -5,7 +5,14 @@ export default function Maintenance() {
   return (
     <>
       <Header />
-      <main className="main-content" style={{ padding: '20px' }}>
+      <main
+        className="main-content"
+        style={{
+          padding: '20px',
+          marginTop: '120px', 
+          minHeight: 'calc(100vh - 400px)'
+        }}
+      >
         <h1>Maintenance Request</h1>
         <form>
           <label>Service:

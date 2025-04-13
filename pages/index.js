@@ -23,6 +23,39 @@ export default function Home() {
         <p>Please use the navigation bar above to browse other pages.</p>
       </main>
 
+      <section style={{
+        backgroundColor: '#fcd6df',
+        color: 'black',
+        padding: '60px 20px',
+        textAlign: 'center'
+      }}>
+        <h2 style={{ fontSize: '36px', marginBottom: '40px' }}>Our Values</h2>
+
+        <div style={{
+          display: 'flex',
+          justifyContent: 'space-around',
+          flexWrap: 'wrap',
+          maxWidth: '1000px',
+          margin: '0 auto'
+        }}>
+          <div style={{ width: '220px', marginBottom: '30px' }}>
+            <p style={{ fontWeight: 'bold' }}>United we<br />are stronger</p>
+          </div>
+
+          <div style={{ width: '220px', marginBottom: '30px' }}>
+            <p style={{ fontWeight: 'bold' }}>Trusted and<br />transparent</p>
+          </div>
+
+          <div style={{ width: '220px', marginBottom: '30px' }}>
+            <p style={{ fontWeight: 'bold' }}>Accountable to<br />ourselves and others</p>
+          </div>
+
+          <div style={{ width: '220px', marginBottom: '30px' }}>
+            <p style={{ fontWeight: 'bold' }}>Visionary<br />Think big, aim high</p>
+          </div>
+        </div>
+      </section>
+
       <Footer />
     </>
   );

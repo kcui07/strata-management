@@ -5,7 +5,14 @@ export default function Payments() {
   return (
     <>
       <Header />
-      <main className="main-content" style={{ padding: '20px' }}>
+      <main
+        className="main-content"
+        style={{
+          padding: '20px',
+          marginTop: '120px', 
+          minHeight: 'calc(100vh - 400px)' 
+        }}
+      >
         <h1>Payments</h1>
         <p>Latest Payment Records:</p>
         <ul>
