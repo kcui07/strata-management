@@ -2,14 +2,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: pink;
-  padding: 20px 60px;
-  height: 100px;
+  padding: 10px 50px;
+  background-color: #f8c8dc;
+  height: 80px; 
 }
 
-.logo {
-  display: flex;
-  align-items: center;
+.logo img {
+  object-fit: contain;
 }
 
 .navbar {
@@ -18,14 +17,13 @@
 }
 
 .navbar a {
-  font-size: 20px;
-  font-weight: bold;
   color: white;
+  font-weight: bold;
+  font-size: 20px; 
   text-decoration: none;
-  transition: transform 0.2s;
+  transition: color 0.3s ease;
 }
 
 .navbar a:hover {
-  transform: scale(1.1);
   color: #ffe0f0;
 }
