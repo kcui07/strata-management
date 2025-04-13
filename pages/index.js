@@ -26,10 +26,8 @@ export default function Home() {
           This site provides information for owners and residents.
         </h3>
 
-        <p style={{ maxWidth: '800px', margin: '0 auto', lineHeight: '1.8', fontSize: '18px' }}>
-          Strata Management is committed to delivering exceptional property management services to owners and residents. 
-          With years of industry experience, we focus on creating harmonious living environments and efficient property operations. 
-          Our team ensures transparent communication, reliable maintenance, and dedicated customer service to meet the diverse needs of our communities.
+        <p style={{ maxWidth: '900px', margin: '0 auto', lineHeight: '1.8', fontSize: '18px' }}>
+          Strata Management has always been committed to providing quality property management services to owners and residents. Based on our industry experience and professional knowledge, Strata Management has a more mature and effective management system and service ability. Compared with traditional companies, we focus on transparent communication, rapid response and personalized service, aiming to create a safe, comfortable, friendly and high-quality community environment. Our team maintains an honest and responsible service philosophy. We can provide reliable facility maintenance, standardized financial management and various community support. We will be the trusted partner of every owner and resident in creating livable, secure and active communities through our professionalism and passion for service, whether it is for routine maintenance, expense management or any other homeowners' needs!
         </p>
       </main>
 
@@ -40,7 +38,7 @@ export default function Home() {
 
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(4, 1fr)',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
           gap: '40px',
           maxWidth: '1200px',
           margin: '0 auto',
@@ -52,7 +50,6 @@ export default function Home() {
           <div style={{ fontSize: '22px', fontWeight: 'bold' }}>Visionary, think big, aim high</div>
         </div>
       </div>
-
 
       <Footer />
     </>
