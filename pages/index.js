@@ -1,4 +1,5 @@
 import Header from '../components/Header';
+import Footer from "../components/Footer";
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
         <p>This site provides information for owners and residents.</p>
         <p>Please use the navigation bar above to browse other pages.</p>
       </main>
+      <Footer />
     </>
   );
 }

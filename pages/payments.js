@@ -1,4 +1,5 @@
 import Header from '../components/Header';
+import Footer from "../components/Footer";
 
 export default function Payments() {
   return (
@@ -12,6 +13,8 @@ export default function Payments() {
           <li>Jane Smith - $450 - 2025-03-05</li>
         </ul>
       </main>
+      <Footer />
+
     </>
   );
 }

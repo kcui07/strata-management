@@ -1,4 +1,5 @@
 import Header from '../components/Header';
+import Footer from "../components/Footer";
 
 export default function Owners() {
   return (
@@ -20,6 +21,8 @@ export default function Owners() {
           </tbody>
         </table>
       </main>
+      <Footer />
+
     </>
   );
 }

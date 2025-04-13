@@ -1,4 +1,5 @@
 import Header from '../components/Header';
+import Footer from "../components/Footer";
 
 export default function Contact() {
   return (
@@ -22,6 +23,7 @@ export default function Contact() {
           <button type="submit">Send</button>
         </form>
       </main>
+      <Footer />
     </>
   );
 }

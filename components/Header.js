@@ -5,10 +5,10 @@ export default function Header() {
   return (
     <nav className={styles.navbar}>
       <Link href="/">Home</Link>
-      <Link href="/owners">Owners</Link>
+      <Link href="/owners">Owners information</Link>
       <Link href="/maintenance">Maintenance</Link>
       <Link href="/payments">Payments</Link>
-      <Link href="/contact">Contact</Link>
+      <Link href="/contact">Contact Us</Link>
     </nav>
   )
 }
