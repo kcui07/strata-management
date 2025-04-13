@@ -17,7 +17,7 @@ export default function Home() {
         />
       </div>
 
-      <main style={{ textAlign: 'center', marginTop: '50px', minHeight: 'calc(100vh - 400px)' }}>
+      <main style={{ textAlign: 'center', marginTop: '120px', minHeight: 'calc(100vh - 400px)' }}>
         <h1>Welcome to Strata Management Website</h1>
         <p>This site provides information for owners and residents.</p>
         <p>Please use the navigation bar above to browse other pages.</p>
