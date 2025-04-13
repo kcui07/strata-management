@@ -7,52 +7,61 @@ export default function Contact() {
       <Header />
 
       <div style={{
-        position: 'relative',
-        width: '100%',
-        height: '600px',
-        backgroundImage: 'url(/contact.jpg)',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
+        display: 'flex',
+        flexDirection: 'column',
+        minHeight: '100vh'
       }}>
+        
+        <div style={{ flex: '1' }}>
+          <div style={{
+            position: 'relative',
+            width: '100%',
+            height: '600px',
+            backgroundImage: 'url(/contact.jpg)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}>
 
-        <div style={{
-          position: 'absolute',
-          top: '30px',
-          left: '30px',
-          color: 'white',
-          fontSize: '24px',
-          maxWidth: '300px',
-          lineHeight: '1.6'
-        }}>
-          Send us a message or request a call back and we’ll get back to you on the same business day.
+            <div style={{
+              position: 'absolute',
+              top: '120px',  
+              left: '30px',
+              color: 'white',
+              fontSize: '20px',
+              lineHeight: '1.8',
+              maxWidth: '280px'
+            }}>
+              Send us a message or request a call back <br /> and we’ll get back to you on the same business day.
+            </div>
+
+            <div style={{
+              position: 'absolute',
+              top: '50%',
+              right: '50px',
+              transform: 'translateY(-50%)',
+              backgroundColor: 'rgba(255,255,255,0.9)',
+              padding: '40px',
+              borderRadius: '10px',
+              boxShadow: '0 4px 20px rgba(0,0,0,0.1)',
+              maxWidth: '400px',
+              width: '100%',
+            }}>
+              <h2 style={{ marginBottom: '20px' }}>Get in touch</h2>
+
+              <form>
+                <input placeholder="Name" style={inputStyle} /><br /><br />
+                <input placeholder="Email" style={inputStyle} /><br /><br />
+                <input placeholder="Phone" style={inputStyle} /><br /><br />
+                <input placeholder="Plan Number or Building Address (optional)" style={inputStyle} /><br /><br />
+                <textarea placeholder="Your Message" style={{ ...inputStyle, height: '100px' }} /><br /><br />
+                <button type="submit" style={buttonStyle}>Submit</button>
+              </form>
+            </div>
+          </div>
         </div>
 
-        <div style={{
-          position: 'absolute',
-          top: '50%',
-          right: '50px',
-          transform: 'translateY(-50%)',
-          backgroundColor: 'rgba(255,255,255,0.9)',
-          padding: '40px',
-          borderRadius: '10px',
-          boxShadow: '0 4px 20px rgba(0,0,0,0.1)',
-          maxWidth: '400px',
-          width: '100%',
-        }}>
-          <h2 style={{ marginBottom: '20px' }}>Get in touch</h2>
-
-          <form>
-            <input placeholder="Name" style={inputStyle} /><br /><br />
-            <input placeholder="Email" style={inputStyle} /><br /><br />
-            <input placeholder="Phone" style={inputStyle} /><br /><br />
-            <input placeholder="Plan Number or Building Address (optional)" style={inputStyle} /><br /><br />
-            <textarea placeholder="Your Message" style={{ ...inputStyle, height: '100px' }} /><br /><br />
-            <button type="submit" style={buttonStyle}>Submit</button>
-          </form>
-        </div>
+        <Footer />
       </div>
-
-      <Footer />
     </>
   );
 }
