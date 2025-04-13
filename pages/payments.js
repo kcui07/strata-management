@@ -1,97 +1,167 @@
-import { useState } from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import { useState } from "react";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 export default function Payment() {
-  const [selectedOption, setSelectedOption] = useState('');
+  const [selected, setSelected] = useState("Rent");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [card, setCard] = useState("");
 
   const prices = {
     Rent: 500,
     Utilities: 50,
+    Both: 550,
   };
 
-  const getTotal = () => {
-    if (!selectedOption) return 0;
-    return selectedOption === 'Both' ? (prices.Rent + prices.Utilities) : prices[selectedOption];
+  const details = {
+    Rent: [{ label: "Weekly Rent", amount: 500 }],
+    Utilities: [{ label: "Weekly Utilities", amount: 50 }],
+    Both: [
+      { label: "Weekly Rent", amount: 500 },
+      { label: "Weekly Utilities", amount: 50 },
+    ],
   };
 
   return (
     <>
       <Header />
 
-      <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
-        <main style={{ flex: '1', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '100px 20px', gap: '50px' }}>
+      <div style={{ display: "flex", minHeight: "100vh", paddingTop: "100px" }}>
+        {/* Left section - Form */}
+        <div style={{ flex: 1, padding: "40px 60px" }}>
+          <h2 style={{ marginBottom: "20px" }}>Make a Payment</h2>
 
-          {/* Left Section */}
-          <div style={{ backgroundColor: '#fff', padding: '40px', borderRadius: '10px', boxShadow: '0 4px 20px rgba(0,0,0,0.1)' }}>
-            <h2>Make a Payment</h2>
-
-            <label>Select Payment Item:</label>
-            <select onChange={(e) => setSelectedOption(e.target.value)} style={selectStyle}>
-              <option value="">-- Please Select --</option>
-              <option value="Rent">Rent</option>
-              <option value="Utilities">Utilities</option>
-              <option value="Both">Rent + Utilities</option>
+          <label>
+            Select Payment Type:
+            <select
+              style={inputStyle}
+              value={selected}
+              onChange={(e) => setSelected(e.target.value)}
+            >
+              <option>Rent</option>
+              <option>Utilities</option>
+              <option>Both</option>
             </select>
+          </label>
 
-            <button className="pay-btn" disabled={!selectedOption}>
-              Pay Now
-            </button>
+          <br /><br />
+
+          <label>
+            Full Name:
+            <input
+              style={inputStyle}
+              placeholder="Enter your name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
+          </label>
+
+          <br /><br />
+
+          <label>
+            Email:
+            <input
+              style={inputStyle}
+              placeholder="Enter your email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </label>
+
+          <br /><br />
+
+          <label>
+            Phone Number:
+            <input
+              style={inputStyle}
+              placeholder="Enter your phone number"
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
+            />
+          </label>
+
+          <br /><br />
+
+          <label>
+            Credit Card Number:
+            <input
+              style={inputStyle}
+              placeholder="xxxx xxxx xxxx xxxx"
+              value={card}
+              onChange={(e) => setCard(e.target.value)}
+            />
+          </label>
+
+          <br /><br />
+
+          <button className="pay-btn" disabled={!name || !email || !phone || !card}>
+            Pay ${prices[selected]}
+          </button>
+        </div>
+
+        {/* Right section - Summary */}
+        <div style={{
+          width: "400px",
+          backgroundColor: "#f9f9f9",
+          padding: "40px",
+          borderLeft: "1px solid #ddd"
+        }}>
+          <h3>Summary</h3>
+          <ul style={{ listStyle: "none", padding: 0 }}>
+            {details[selected].map((item, index) => (
+              <li key={index} style={{
+                display: "flex", justifyContent: "space-between", marginBottom: "10px"
+              }}>
+                <span>{item.label}</span>
+                <strong>${item.amount.toFixed(2)}</strong>
+              </li>
+            ))}
+          </ul>
+          <hr />
+          <div style={{
+            display: "flex", justifyContent: "space-between", marginTop: "10px"
+          }}>
+            <strong>Total</strong>
+            <strong>${prices[selected].toFixed(2)}</strong>
           </div>
-
-          {/* Right Section */}
-          <div style={{ backgroundColor: '#fff', padding: '40px', borderRadius: '10px', boxShadow: '0 4px 20px rgba(0,0,0,0.1)', width: '300px' }}>
-            <h3>Summary</h3>
-
-            {selectedOption && (
-              <>
-                {selectedOption === 'Both' ? (
-                  <>
-                    <p>Rent: $500/week</p>
-                    <p>Utilities: $50/week</p>
-                  </>
-                ) : (
-                  <p>{selectedOption}: ${prices[selectedOption]}/week</p>
-                )}
-
-                <hr />
-                <p>Total: ${getTotal()}/week</p>
-              </>
-            )}
-          </div>
-        </main>
-
-        <Footer />
+        </div>
       </div>
+
+      <Footer />
 
       <style jsx>{`
         .pay-btn {
-          margin-top: 20px;
-          width: 100%;
-          padding: 12px;
           background-color: #f9b3b3;
           border: none;
-          color: #000;
-          border-radius: 5px;
+          padding: 14px 30px;
           font-size: 16px;
           font-weight: bold;
+          border-radius: 6px;
           cursor: pointer;
           transition: all 0.3s ease;
+          width: 100%;
         }
 
-        .pay-btn:hover:enabled {
-          transform: scale(1.1);
-          opacity: 0.8;
+        .pay-btn:hover {
+          transform: scale(1.05);
+          opacity: 0.85;
+        }
+
+        .pay-btn:disabled {
+          opacity: 0.5;
+          cursor: not-allowed;
         }
       `}</style>
     </>
   );
 }
 
-const selectStyle = {
-  width: '100%',
-  padding: '10px',
-  marginTop: '10px',
-  borderRadius: '5px',
-  border: '1px solid #ccc'
+const inputStyle = {
+  width: "100%",
+  padding: "10px",
+  borderRadius: "5px",
+  border: "1px solid #ccc",
+  marginTop: "5px"
 };
