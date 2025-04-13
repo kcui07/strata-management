@@ -17,7 +17,7 @@ export default function Contact() {
           <div style={{
             position: 'relative',
             width: '100%',
-            minHeight: '100vh', 
+            minHeight: '100vh',
             backgroundImage: 'url(/contact.jpg)',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
@@ -56,7 +56,7 @@ export default function Contact() {
                 <input placeholder="Phone" style={inputStyle} /><br /><br />
                 <input placeholder="Plan Number or Building Address (optional)" style={inputStyle} /><br /><br />
                 <textarea placeholder="Your Message" style={{ ...inputStyle, height: '100px' }} /><br /><br />
-                <button type="submit" style={buttonStyle}>Submit</button>
+                <button type="submit" className="contact-btn">Submit</button>
               </form>
             </div>
           </div>
@@ -64,6 +64,25 @@ export default function Contact() {
 
         <Footer />
       </div>
+
+      <style jsx>{`
+        .contact-btn {
+          width: 100%;
+          padding: 12px;
+          background-color: #add8e6;
+          border: none;
+          color: #000;
+          border-radius: 5px;
+          font-size: 16px;
+          cursor: pointer;
+          transition: all 0.3s ease;
+        }
+
+        .contact-btn:hover {
+          transform: scale(1.1);
+          opacity: 0.8;
+        }
+      `}</style>
     </>
   );
 }
@@ -73,15 +92,4 @@ const inputStyle = {
   padding: '10px',
   borderRadius: '5px',
   border: '1px solid #ccc',
-};
-
-const buttonStyle = {
-  width: '100%',
-  padding: '12px',
-  backgroundColor: '#add8e6', 
-  border: 'none',
-  color: '#000',
-  borderRadius: '5px',
-  fontSize: '16px',
-  cursor: 'pointer',
 };
