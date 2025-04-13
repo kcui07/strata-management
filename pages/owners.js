@@ -6,89 +6,65 @@ export default function Owners() {
     <>
       <Header />
 
-      <main className="main-content" style={{ padding: '40px 20px', textAlign: 'center', minHeight: 'calc(100vh - 400px)' }}>
-        <h1 style={{ fontSize: '40px', fontWeight: 'bold', marginBottom: '40px' }}>
-          Owners Information
-        </h1>
+      <main className="main-content" style={{
+        padding: '60px 20px',
+        minHeight: 'calc(100vh - 400px)',
+        display: 'grid',
+        gridTemplateColumns: '1fr 1fr',
+        gridTemplateRows: '1fr 1fr',
+        gap: '40px',
+        maxWidth: '1200px',
+        margin: '0 auto'
+      }}>
 
-        <section style={{ marginBottom: '60px' }}>
-          <h2 style={{ fontSize: '28px', marginBottom: '20px' }}>Owner Portal Access</h2>
+        <section style={boxStyle('#ffd6d6', '#ffa6a6')}>
+          <h2>Owner Portal Access</h2>
           <p>Log in to view your property details, pay bills, and access documents.</p>
-          <button style={{
-            marginTop: '15px',
-            backgroundColor: '#ffd6d6',
-            border: 'none',
-            padding: '10px 30px',
-            borderRadius: '8px',
-            cursor: 'pointer'
-          }}>
-            Login to Portal
-          </button>
+          <button style={buttonStyle('#ffa6a6', '#ff8c8c')}>Login to Portal</button>
         </section>
 
-        <section style={{ marginBottom: '60px' }}>
-          <h2 style={{ fontSize: '28px', marginBottom: '20px' }}>Download Documents</h2>
+        <section style={boxStyle('#d6f5e3', '#a6e5c5')}>
+          <h2>Download Documents</h2>
           <p>Download important forms and guidelines for owners.</p>
-          <button style={{
-            marginTop: '15px',
-            backgroundColor: '#d6f5e3',
-            border: 'none',
-            padding: '10px 30px',
-            borderRadius: '8px',
-            cursor: 'pointer'
-          }}>
-            View Documents
-          </button>
+          <button style={buttonStyle('#a6e5c5', '#7edbb0')}>View Documents</button>
         </section>
 
-        <section style={{ marginBottom: '60px' }}>
-          <h2 style={{ fontSize: '28px', marginBottom: '20px' }}>Payment Instructions</h2>
+        <section style={boxStyle('#d6eaff', '#a6d8ff')}>
+          <h2>Payment Instructions</h2>
           <p>Find detailed instructions on how to pay strata fees.</p>
-          <button style={{
-            marginTop: '15px',
-            backgroundColor: '#d6eaff',
-            border: 'none',
-            padding: '10px 30px',
-            borderRadius: '8px',
-            cursor: 'pointer'
-          }}>
-            Payment Guide
-          </button>
+          <button style={buttonStyle('#a6d8ff', '#7cc5ff')}>Payment Guide</button>
         </section>
 
-        <section style={{ marginBottom: '60px' }}>
-          <h2 style={{ fontSize: '28px', marginBottom: '20px' }}>Frequently Asked Questions</h2>
+        <section style={boxStyle('#ffe2d6', '#ffc8a6')}>
+          <h2>Frequently Asked Questions</h2>
           <p>Check answers to commonly asked questions.</p>
-          <button style={{
-            marginTop: '15px',
-            backgroundColor: '#ffe2d6',
-            border: 'none',
-            padding: '10px 30px',
-            borderRadius: '8px',
-            cursor: 'pointer'
-          }}>
-            View FAQs
-          </button>
+          <button style={buttonStyle('#ffc8a6', '#ffa26d')}>View FAQs</button>
         </section>
-
-        <section>
-          <h2 style={{ fontSize: '28px', marginBottom: '20px' }}>Contact Property Manager</h2>
-          <p>If you have other questions, feel free to contact us directly.</p>
-          <button style={{
-            marginTop: '15px',
-            backgroundColor: '#e3d6ff',
-            border: 'none',
-            padding: '10px 30px',
-            borderRadius: '8px',
-            cursor: 'pointer'
-          }}>
-            Contact Us
-          </button>
-        </section>
-
       </main>
 
       <Footer />
     </>
   )
 }
+
+const boxStyle = (bg, hover) => ({
+  backgroundColor: bg,
+  padding: '40px 20px',
+  borderRadius: '10px',
+  textAlign: 'center',
+  transition: 'background-color 0.3s',
+  cursor: 'pointer'
+})
+
+const buttonStyle = (bg, hover) => ({
+  marginTop: '20px',
+  backgroundColor: bg,
+  border: 'none',
+  padding: '10px 30px',
+  borderRadius: '8px',
+  cursor: 'pointer',
+  transition: 'background-color 0.3s',
+  color: '#333',
+  fontWeight: 'bold',
+  fontSize: '16px'
+})

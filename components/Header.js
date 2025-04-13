@@ -11,7 +11,7 @@ export default function Header() {
 
       <nav className={styles.navbar}>
         <Link href="/">Home</Link>
-        <Link href="/owners">Owners information</Link>
+        <Link href="/owners">Owners Service</Link>
         <Link href="/maintenance">Maintenance</Link>
         <Link href="/payments">Payments</Link>
         <Link href="/contact">Contact Us</Link>
