@@ -10,14 +10,14 @@ export default function Contact() {
         display: 'flex',
         flexDirection: 'column',
         minHeight: '100vh',
-        marginTop: '80px' 
+        marginTop: '80px'
       }}>
 
         <div style={{ flex: '1' }}>
           <div style={{
             position: 'relative',
             width: '100%',
-            minHeight: '600px',
+            minHeight: '100vh', 
             backgroundImage: 'url(/contact.jpg)',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
@@ -32,7 +32,7 @@ export default function Contact() {
               lineHeight: '1.8',
               maxWidth: '280px'
             }}>
-              Send us a message or request a call back <br /> 
+              Send us a message or request a call back
               and we will get back to you on the same business day.
             </div>
 
