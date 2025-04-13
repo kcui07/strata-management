@@ -1,12 +1,18 @@
 .footer {
-    background-color: rgb(245, 217, 127);
+    background-color: #f9e29a;
     color: white;
-    padding: 20px;
+    padding: 40px 20px;
+  }
+  
+  .footer h2 {
+    font-size: 20px;
     font-weight: bold;
-    text-align: left;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .footer p {
+    margin: 3px 0;
+    font-size: 15px;
+    font-weight: bold;
   }
   
