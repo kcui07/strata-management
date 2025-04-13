@@ -39,18 +39,20 @@ export default function Home() {
         </h2>
 
         <div style={{
-          display: 'flex',
-          justifyContent: 'space-around',
-          flexWrap: 'wrap',
+          display: 'grid',
+          gridTemplateColumns: 'repeat(4, 1fr)',
+          gap: '40px',
           maxWidth: '1200px',
-          margin: '0 auto'
+          margin: '0 auto',
+          textAlign: 'center'
         }}>
-          <div style={{ fontSize: '22px', fontWeight: 'bold', margin: '20px' }}>United we are stronger</div>
-          <div style={{ fontSize: '22px', fontWeight: 'bold', margin: '20px' }}>Trusted and transparent</div>
-          <div style={{ fontSize: '22px', fontWeight: 'bold', margin: '20px' }}>Accountable to ourselves and others</div>
-          <div style={{ fontSize: '22px', fontWeight: 'bold', margin: '20px' }}>Visionary, think big, aim high</div>
+          <div style={{ fontSize: '22px', fontWeight: 'bold' }}>United we are stronger</div>
+          <div style={{ fontSize: '22px', fontWeight: 'bold' }}>Trusted and transparent</div>
+          <div style={{ fontSize: '22px', fontWeight: 'bold' }}>Accountable to ourselves and others</div>
+          <div style={{ fontSize: '22px', fontWeight: 'bold' }}>Visionary, think big, aim high</div>
         </div>
       </div>
+
 
       <Footer />
     </>
