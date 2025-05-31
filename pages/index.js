@@ -19,8 +19,9 @@ export default function Home() {
 
       <main className="main-content" style={{ textAlign: 'center', marginTop: '120px', minHeight: 'calc(100vh - 400px)', marginBottom: '80px' }}>
         <h1 style={{ fontSize: '40px', fontWeight: 'bold' }}>
-          Welcome to Strata Management Website
+          Welcome {process.env.NEXT_PUBLIC_USERNAME || 'Guest'} to Strata Management Website
         </h1>
+
 
         <h3 style={{ color: '#f48fb1', marginTop: '30px', marginBottom: '30px' }}>
           This site provides information for owners and residents.
